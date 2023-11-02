@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">developerChat</string>
+    <string name="slogan">"Una comunidad para chatear entre programadores"</string>
+    <string name="developerName">"By EderMelo"</string>
+</resources>
