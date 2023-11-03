@@ -5,41 +5,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".dashboardMainActivity">
+    <!-- cabecera -->
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:gravity="end"
+        android:orientation="vertical"
+        android:background="@color/green_3"
+        android:padding="10dp">
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:cardCornerRadius="35dp"
+            android:layout_gravity="bottom">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/users"
+                android:scaleType="centerInside"
+                android:contentDescription="@string/imageUser"
+                android:padding="10dp"/>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+    <!-- cuerpo-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_below="@id/toolbar"
+        android:gravity="fill"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mainUserRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="567dp"
+            android:layout_weight="1">
+
+        </androidx.recyclerview.widget.RecyclerView>
 
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="392dp"
-            android:layout_height="40dp"
-            android:layout_marginBottom="50dp"
-            android:fontFamily="@font/roboto_bold"
-            android:gravity="center"
-            android:text="Sorpresa !!!"
-            android:textAlignment="center"
-            tools:layout_editor_absoluteX="180dp"
-            tools:layout_editor_absoluteY="253dp" />
 
 
-        <Button
-            android:id="@+id/btnLogout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Cerrar sesion"
-            android:textAlignment="center"
-            tools:layout_editor_absoluteX="109dp"
-            tools:layout_editor_absoluteY="421dp" />
 
 
     </LinearLayout>
 
-
-
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:backgroundTint="@color/green_3"
+        android:text="@string/exit"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+    />
 
 </RelativeLayout>

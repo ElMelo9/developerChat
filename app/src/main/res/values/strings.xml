@@ -2,4 +2,8 @@
     <string name="app_name">developerChat</string>
     <string name="slogan">"Una comunidad para chatear entre programadores"</string>
     <string name="developerName">"By EderMelo"</string>
+    <string name="signOff">"Cerrar sesion"</string>
+    <string name="exit">"Salir"</string>
+    <string name="imageUser">"Imagenen de perfil"</string>
+
 </resources>
