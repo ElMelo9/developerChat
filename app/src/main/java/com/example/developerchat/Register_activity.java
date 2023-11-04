@@ -35,6 +35,8 @@ public class Register_activity extends AppCompatActivity {
     private String password;
     private String lastName;
 
+    private String uid;
+
     private FirebaseAuth firebaseAuth;
     private DatabaseReference databaseReferences;
 
@@ -88,15 +90,18 @@ public class Register_activity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            uid = firebaseAuth.getCurrentUser().getUid();
 
                             Map<String,Object> map = new HashMap<>();
                             map.put("name",name);
                             map.put("lastName",lastName);
                             map.put("email",email);
                             map.put("password",password);
-                            String id = firebaseAuth.getCurrentUser().getUid();
+                            map.put("status","hey ahora estoy usando developerChat!");
+                            map.put("uid",uid);
 
-                            databaseReferences.child("Users").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+
+                            databaseReferences.child("Users").child(uid).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@androidx.annotation.NonNull Task<Void> task2) {
                                     if (task2.isSuccessful()) {
