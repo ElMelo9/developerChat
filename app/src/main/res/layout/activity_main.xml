@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/green_3"
-    tools:context=".MainActivity">
-
+    tools:context=".activity.MainActivity">
     <TextView
         android:id="@+id/textView"
         android:layout_width="413dp"
@@ -52,6 +51,7 @@
         android:layout_marginBottom="125dp"
         android:fontFamily="@font/roboto"
         android:text="@string/slogan"
+        android:layout_below="@+id/imageView"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -70,6 +70,7 @@
         android:layout_marginStart="3dp"
         android:fontFamily="@font/roboto"
         android:text="@string/developerName"
+        android:layout_below="@+id/textView2"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
@@ -78,4 +79,4 @@
         tools:text="@string/developerName" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

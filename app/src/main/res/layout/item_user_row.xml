@@ -6,6 +6,7 @@
     android:layout_margin="@dimen/_10sdp">
     <!--row usuarios-->
     <LinearLayout
+
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,11 +15,13 @@
 
         <!--imagen de perfil usuarios-->
         <androidx.cardview.widget.CardView
+            android:background="@color/white"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_gravity="bottom">
 
             <ImageView
+                android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/user"
@@ -28,6 +31,7 @@
         </androidx.cardview.widget.CardView>
 
         <LinearLayout
+            android:padding="@dimen/_5sdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

@@ -65,6 +65,7 @@
             android:fontFamily="@font/roboto"
             android:text="Iniciar sesion"
             android:textAlignment="center"
+            android:textColor="@color/white"
             android:layout_marginBottom="10dp"
             android:backgroundTint="@color/orange_1"/>
 
@@ -73,6 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
+            android:textColor="@color/white"
             android:text="Registrarte"
             android:backgroundTint="@color/orange_1"/>
     </LinearLayout>

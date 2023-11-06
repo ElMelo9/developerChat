@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChatUser">
+    android:background="@color/white"
+    tools:context=".activity.ChatUserActivity">
 
     <LinearLayout
         android:id="@+id/toolbar"
@@ -22,6 +23,7 @@
             android:layout_gravity="bottom">
 
             <ImageView
+                android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/users"
@@ -65,12 +67,15 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:background="@color/white"
+        android:id="@+id/recyclerView"
         android:layout_below="@+id/toolbar"
         android:layout_above="@id/lpie"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <LinearLayout
+        android:background="@color/white"
         android:id="@+id/lpie"
         android:layout_margin="@dimen/_10sdp"
         android:layout_alignParentBottom="true"
@@ -79,6 +84,7 @@
         android:layout_height="wrap_content">
         
         <androidx.cardview.widget.CardView
+            android:background="@color/white"
             app:cardCornerRadius="@dimen/_600sdp"
             app:cardBackgroundColor="@color/green_2"
             android:layout_weight="1"

@@ -1,4 +1,4 @@
-package com.example.developerchat;
+package com.example.developerchat.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,7 +10,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.developerchat.R;
+import com.example.developerchat.activity.ChatUserActivity;
 import com.example.developerchat.models.User;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
@@ -18,7 +21,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     Context dashboardMainActivity;
     ArrayList<User> userArrayList;
-    public UserAdapter(dashboardMainActivity dashboardMainActivity, ArrayList<User> userArrayList) {
+    public UserAdapter(com.example.developerchat.activity.dashboardMainActivity dashboardMainActivity, ArrayList<User> userArrayList) {
 
         this.dashboardMainActivity = dashboardMainActivity;
         this.userArrayList = userArrayList;
@@ -33,15 +36,19 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
         User user  = userArrayList.get(position);
+
+        if(FirebaseAuth.getInstance().getCurrentUser().equals(user.getUid())){
+
+            holder.itemView.setVisibility(View.GONE);
+        }
         holder.user_name.setText(user.getName()+" "+user.getLastName());
         holder.user_status.setText(user.getStatus());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-               Intent intent = new Intent(dashboardMainActivity,ChatUser.class);
+               Intent intent = new Intent(dashboardMainActivity, ChatUserActivity.class);
                intent.putExtra("name",user.getName());
                intent.putExtra("lasName",user.getLastName());
                intent.putExtra("uid",user.getUid());

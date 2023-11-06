@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".dashboardMainActivity">
+    android:background="@color/white"
+    tools:context=".activity.dashboardMainActivity">
     <!-- cabecera -->
     <LinearLayout
         android:id="@+id/toolbar"
@@ -22,6 +23,7 @@
             android:layout_gravity="bottom">
 
             <ImageView
+                android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/users"
@@ -57,11 +59,13 @@
     </LinearLayout>
 
     <Button
+
         android:id="@+id/btnLogout"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:backgroundTint="@color/green_3"
         android:text="@string/exit"
+        android:textColor="@color/white"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="16dp"

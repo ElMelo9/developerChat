@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register_activity">
+    tools:context=".activity.Register_activity"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,6 +37,7 @@
             android:ems="10"
             android:fontFamily="@font/roboto"
             android:hint="Nombre"
+            android:textColorHint="@color/orange_1"
             android:inputType="textPersonName"
             android:textAlignment="center"
             android:textColor="#000000" />
@@ -47,6 +49,7 @@
             android:layout_marginBottom="10dp"
             android:contentDescription="Digite un correo valido"
             android:ems="10"
+            android:textColorHint="@color/orange_1"
             android:fontFamily="@font/roboto"
             android:hint="Apellido"
             android:inputType="textPersonName"
@@ -55,6 +58,7 @@
             android:backgroundTint="#FFFFFF"/>
         <EditText
             android:id="@+id/txtEmail"
+            android:textColorHint="@color/orange_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -69,6 +73,7 @@
 
         <EditText
             android:id="@+id/txtPassword"
+            android:textColorHint="@color/orange_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -87,6 +92,7 @@
             android:fontFamily="@font/roboto"
             android:text="Guardar"
             android:textAlignment="center"
+            android:textColor="@color/white"
             android:layout_marginBottom="10dp"
             android:backgroundTint="@color/orange_1"/>
 
